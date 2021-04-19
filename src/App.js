@@ -10,7 +10,7 @@ function App() {
         Dictionary
       </header>
       <Dictionary />
-      <footer className="App-footer">coded by Jes Jarvinen</footer>
+      <footer className="App-footer"><small><a href="https://github.com/jaaarvi/dictionary-project" target="_blank" rel="noreferrer noopener">Open-source code</a> by Jes Jarvinen</small></footer>
       </div>
     </div>
   );
