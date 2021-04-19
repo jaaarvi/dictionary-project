@@ -1,4 +1,9 @@
 .Dictionary {
-  margin: 30px;
   text-align: center;
+}
+
+.search-form {
+  background: #70d5d2;
+  opacity: 0.8;
+  padding-bottom: 30px;
 }
