@@ -2,8 +2,49 @@
   text-align: center;
 }
 
-.search-form {
-  background: #70d5d2;
-  opacity: 0.8;
+.Dictionary .App-header {
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 800;
+  padding: 30px 0 0;
+  background: var(--primary-color);
+  height: 60px;
+  text-shadow: 2px 2px white;
+}
+
+.Dictionary .search-form {
+  background: var(--primary-color);
   padding-bottom: 30px;
+  color: var(--intense-color);
+}
+
+.Dictionary .search-input {
+  width: 200px;
+  height: 32px;
+  font-size: 14px;
+  border: 1px solid var(--intense-color);
+  padding-left: 6px;
+}
+
+.Dictionary .search-input:focus {
+  outline: 2px solid var(--intense-color);
+}
+
+.Dictionary .search-button {
+  width: 70px;
+  height: 32px;
+  font-size: 14px;
+  border: none;
+  background: white;
+  border: 1px solid var(--intense-color);
+}
+
+.Dictionary .search-button:hover {
+  background: var(--intense-color);
+  color: white;
+}
+
+.Dictionary .search-button:focus {
+  outline: 2px solid var(--intense-color);
 }

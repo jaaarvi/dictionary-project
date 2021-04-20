@@ -1,0 +1,17 @@
+.Phonetics {
+}
+
+.Phonetics a {
+  text-decoration: none;
+  border: 1px solid var(--subdued-color);
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0 10px 0;
+  color: var(--subdued-color);
+}
+
+.Phonetics a:hover {
+  background: var(--subdued-color);
+  cursor: pointer;
+  color: white;
+}

@@ -1,0 +1,10 @@
+ul.Synonyms {
+  padding: 20px;
+  background: var(--secondary-color);
+  font-size: 14px;
+}
+
+.Synonyms li {
+  display: inline-block;
+  padding-right: 26px;
+}
