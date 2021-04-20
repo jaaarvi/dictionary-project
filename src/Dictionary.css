@@ -48,3 +48,7 @@
 .Dictionary .search-button:focus {
   outline: 2px solid var(--intense-color);
 }
+
+.Dictionary section.try-me {
+  padding: 40px;
+}
