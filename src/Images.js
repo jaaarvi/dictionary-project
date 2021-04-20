@@ -3,7 +3,6 @@ import "./Images.css";
 
 export default function Images(props) {
   if (props.data) {
-    console.log(props.data);
     return (
       <section className="Images">
         <div className="row">
