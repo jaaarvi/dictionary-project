@@ -1,0 +1,16 @@
+section.Images {
+  padding: 40px;
+}
+
+.Images img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  padding-bottom: 20px;
+}
+
+.Images .photo-attribution {
+  text-align: right;
+  font-size: 12px;
+  padding-top: 10px;
+}

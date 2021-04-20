@@ -8,9 +8,16 @@ import "./Dictionary.css";
 export default function Dictionary() {
   const [keyword,setKeyword] = useState(null);
   const [data,setData] = useState(null);
+  const [photos,setPhotos] = useState(null);
+  const [ready,setReady] = useState(false);
 
   function handleResponse(response) {
     setData(response.data[0]);
+    setReady(true);
+  }
+
+  function handleImageResponse(response) {
+    setPhotos(response.data.photos);
   }
 
   function handleSearch(event) {
@@ -20,6 +27,13 @@ export default function Dictionary() {
     // Dictionary API at https://dicitonaryapi.dev/
 
     axios.get(apiUrl).then(handleResponse);
+
+    let apiKeyPexels = "563492ad6f9170000100000163a768b52c5c467aa0f26bfcffd11434";
+    let apiUrlPexels = `https://api.pexels.com/v1/search?query=${keyword}&per_page=12`;
+    //Photo API via https://www.pexels.com/api/documentation/
+    let header = { Authorization : `Bearer ${apiKeyPexels}` };
+
+    axios.get(apiUrlPexels, { headers: header }).then(handleImageResponse);
   }
 
   function handleWordChange(event) {
@@ -27,7 +41,7 @@ export default function Dictionary() {
     setKeyword(event.target.value);
   }
   
-  if (keyword) {
+  if (ready) {
   return (
     <div className="Dictionary">
       <section><div className="App-header">
@@ -38,7 +52,7 @@ export default function Dictionary() {
         <input type="submit" value="Search" className="search-button" />
       </form></section>
       <Results data={data} />
-      <Images />
+      <Images data={photos} />
     </div>
   );} else {
     return (

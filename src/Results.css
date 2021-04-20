@@ -1,5 +1,4 @@
 .Results {
-  margin: 40px;
   text-align: left;
 }
 
@@ -8,10 +7,5 @@
 }
 
 .Results h2 {
-  font-size: 30px;
-}
-
-.Results h4 {
-  position: relative;
-  top: -15px;
+  font-size: 34px;
 }
